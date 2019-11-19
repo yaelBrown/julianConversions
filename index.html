@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="date" id="datePicker">
+  <div id="printDate"></div>
+  <button id="updateDate">Update Date</button>
+
+  <script>
+    const datePicked = document.getElementById("datePicker");
+    const printDate = document.getElementById("printDate");
+    const update = document.getElementById("updateDate");
+
+    // printDate.innerHTML = "asdf";
+    
+    update.addEventListener("click", () => {
+      console.log("update was clicked");
+      printDate.innerHTML = datePicked.value;
+    })
+  
+  
+  
+  </script>  
+</body>
+</html>
