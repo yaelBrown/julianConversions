@@ -62,7 +62,6 @@ const dateToJulian = (d) => {
 
 // console.log(dateToJulian(sampleDate));
 
-
 // const sampleJulian = "19112";
 // const startDays = [1,32,60,91,121,152,182,213,244,274,305,335];
 
@@ -104,55 +103,45 @@ const julianToDate = (j) => {
     case (tempNum >= 32 && tempNum < 60):
       m = "February";
       d = tempNum - 31;
-      (isLeapYear) ? d++ : "";
       break;
     case (tempNum >= 60 && tempNum < 91):
       m = "March";
       d = tempNum - 59;
-      (isLeapYear) ? d++ : "";
       break;
     case (tempNum >= 91 && tempNum < 121):
       m = "April";
       d = tempNum - 90;
-      (isLeapYear) ? d++ : "";
       break;
     case (tempNum >= 121 && tempNum < 152):
       m = "June";
       d = tempNum - 120;
-      (isLeapYear) ? d++ : "";
       break;
     case (tempNum >= 152 && tempNum < 182):
       m = "July";
       d = tempNum - 151;
-      (isLeapYear) ? d++ : "";
       break;
     case (tempNum >= 213 && tempNum < 244):
       m = "August";
       d = tempNum - 212;
-      (isLeapYear) ? d++ : "";
       break;
     case (tempNum >= 244 && tempNum < 274):
       m = "September";
       d = tempNum - 243;
-      (isLeapYear) ? d++ : "";
       break;
     case (tempNum >= 274 && tempNum < 305):
       m = "October";
       d = tempNum - 273;
-      (isLeapYear) ? d++ : "";
       break;
     case (tempNum >= 305 && tempNum < 335):
       m = "November";
       d = tempNum - 304;
-      (isLeapYear) ? d++ : "";
       break;
     default:
       m = "December";
       d = tempNum - 354;
-      (isLeapYear) ? d++ : "";
   }
 
-
+  (isLeapYear) ? (m != "January") ? d++ : "" : "";
 
   // create output
   let out = m + " " + d + ", " + y;
